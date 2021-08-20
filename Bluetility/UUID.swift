@@ -19,17 +19,26 @@ class UUID {
     func get(device: Device) -> String? {
         let adv = device.advertisingData
         let serviceUUIDs = adv[CBAdvertisementDataServiceUUIDsKey] as? [CBUUID]
-        let mfgData = adv[CBAdvertisementDataManufacturerDataKey] as? Data
-
 
         if let hexString = serviceUUIDs?.first?.uuidString {
-            let uuid = Int(hexString, radix: 16) ?? 0
+            var uuid = 0
+            if hexString.count >= 4 {
+                uuid = Int(self.sliceString(s: hexString, start: 0, length: 4), radix: 16) ?? 0
+            }
             return self.get(uuid: UInt16(uuid))
         } else {
+            let mfgData = adv[CBAdvertisementDataManufacturerDataKey] as? Data
             let hexString = mfgData?.hexString ?? ""
-            let maybeApple = hexString[String.Index(utf16Offset: 0, in: hexString)...String.Index(utf16Offset: 3, in: hexString)] == "4C00"
+            var maybeApple = false
+            if hexString.count >= 4 {
+                maybeApple = self.sliceString(s: hexString, start: 0, length: 4) == "4C00"
+            }
             return maybeApple ? "Maybe Apple" : nil
         }
+    }
+
+    private func sliceString(s: String, start: Int, length: Int) -> String {
+        return String(s[String.Index(utf16Offset: start, in: s)..<String.Index(utf16Offset: length, in: s)])
     }
 
     let uuids: [UInt16: String] = [
