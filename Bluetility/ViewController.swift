@@ -129,7 +129,8 @@ extension ViewController : NSBrowserDelegate {
         switch column {
         case 0:
             let device = scanner.devices[row]
-            cell.title = (device.friendlyName) + "(\(device.rssi))"
+            let manufacturer = UUID().get(device: device)
+            cell.title = "\(manufacturer ?? "?"): " + (device.friendlyName) + "(\(device.rssi))"
             let rect = browser.frame(ofRow: row, inColumn: column)
             if tooltipTagForRow[row] == nil {
                 let tag = browser.addToolTip(rect, owner: self, userData: nil)

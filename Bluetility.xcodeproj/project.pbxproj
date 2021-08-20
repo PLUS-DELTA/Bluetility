@@ -21,10 +21,11 @@
 		D89F71D324ACF02800861217 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89F71D224ACF02700861217 /* Device.swift */; };
 		D89F71D524ACF5F000861217 /* LogUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89F71D424ACF5F000861217 /* LogUtils.swift */; };
 		D89F71D724ACF67500861217 /* Swift+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89F71D624ACF67500861217 /* Swift+Extensions.swift */; };
+		D9FCF59F26CFBDA300D23B9D /* UUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FCF59E26CFBDA300D23B9D /* UUID.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		374931871BF169C90087E39F /* Bluetility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bluetility.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		374931871BF169C90087E39F /* Bluetility Δ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bluetility Δ.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3749318A1BF169C90087E39F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3749318C1BF169C90087E39F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3749318E1BF169C90087E39F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,6 +49,7 @@
 		D89F71D224ACF02700861217 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		D89F71D424ACF5F000861217 /* LogUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogUtils.swift; sourceTree = "<group>"; };
 		D89F71D624ACF67500861217 /* Swift+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swift+Extensions.swift"; sourceTree = "<group>"; };
+		D9FCF59E26CFBDA300D23B9D /* UUID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUID.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +79,7 @@
 		374931881BF169C90087E39F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				374931871BF169C90087E39F /* Bluetility.app */,
+				374931871BF169C90087E39F /* Bluetility Δ.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,6 +102,7 @@
 				D89F71D624ACF67500861217 /* Swift+Extensions.swift */,
 				505C6E7F233FC8C400ABC0A3 /* NSTextField+Shake.swift */,
 				D87DC9E4237F2BC800DB176C /* CBPeripheral+Extension.swift */,
+				D9FCF59E26CFBDA300D23B9D /* UUID.swift */,
 			);
 			path = Bluetility;
 			sourceTree = "<group>";
@@ -132,7 +135,7 @@
 			);
 			name = Bluetility;
 			productName = Bluetility;
-			productReference = 374931871BF169C90087E39F /* Bluetility.app */;
+			productReference = 374931871BF169C90087E39F /* Bluetility Δ.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -194,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9FCF59F26CFBDA300D23B9D /* UUID.swift in Sources */,
 				D87DC9E5237F2BC800DB176C /* CBPeripheral+Extension.swift in Sources */,
 				3749319A1BF16D980087E39F /* BluetilityWindowController.swift in Sources */,
 				3749318D1BF169C90087E39F /* ViewController.swift in Sources */,
@@ -226,6 +230,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D85908F22427E34700CBECC9 /* Debug.xcconfig */;
 			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				MARKETING_VERSION = 1.4;
 			};
 			name = Debug;
 		};
@@ -233,6 +239,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D85908F32427E34700CBECC9 /* Release.xcconfig */;
 			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				MARKETING_VERSION = 1.4;
 			};
 			name = Release;
 		};
@@ -241,6 +249,8 @@
 			baseConfigurationReference = D85908F22427E34700CBECC9 /* Debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.p-dlt.apps.Bluetility";
+				PRODUCT_NAME = "Bluetility Δ";
 			};
 			name = Debug;
 		};
@@ -248,6 +258,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D85908F32427E34700CBECC9 /* Release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				DEVELOPMENT_TEAM = KD57B42JRX;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.p-dlt.apps.Bluetility";
+				PRODUCT_NAME = "Bluetility Δ";
 			};
 			name = Release;
 		};
